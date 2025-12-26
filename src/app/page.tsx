@@ -2,10 +2,12 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 
+
 import { useTheme } from 'next-themes'
 
+
 const page = () => {
-     const{theme}={useTheme}
+     const{theme}=useTheme()
      const [mounted, setMounted] = React.useState(false)
 
 React.useEffect(() => {
@@ -20,7 +22,7 @@ if (!mounted) return null
              <Image src={theme === "dark" ? "/antiqueog.png" : "/ogblack.png"} alt="img" height={450} width={550}  />
               {/* <Image src="/antiqueog.png" alt="img" height={450} width={550}/> */}
 
-
+          
      
       
 
